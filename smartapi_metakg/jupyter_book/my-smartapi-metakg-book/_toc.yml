@@ -1,0 +1,11 @@
+# Table of contents
+format: jb-book
+root: introduction
+chapters:
+  - file: understanding_metakg
+  - file: building_metakg
+  - file: interactive_examples
+    sections:
+      - file: query_paths
+      - file: visualize_paths
+  - file: conclusion

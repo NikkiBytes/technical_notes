@@ -1,0 +1,57 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 641, in run_until_complete
+    return future.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Querying Paths Using MetaKGPathFinder
+
+# Import necessary modules
+from metakg_pathfinder import MetaKGPathFinder
+
+# Initialize the MetaKGPathFinder with a sample MetaKG file
+# Replace "path/to/metakg.json" with the actual path to your MetaKG index file
+pathfinder = MetaKGPathFinder("path/to/metakg.json")
+
+# Example input: Define source and target entities
+source = "GeneA"
+target = "DiseaseB"
+
+# Perform the query to find paths between the source and target
+paths = pathfinder.find_paths(source, target)
+
+# Display the results
+if paths:
+    print(f"Found {len(paths)} path(s) from {source} to {target}:")
+    for i, path in enumerate(paths, start=1):
+        print(f"Path {i}: {' -> '.join(path)}")
+else:
+    print(f"No paths found from {source} to {target}.")
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 4[0m
+[1;32m      1[0m [38;5;66;03m# Querying Paths Using MetaKGPathFinder[39;00m
+[1;32m      2[0m 
+[1;32m      3[0m [38;5;66;03m# Import necessary modules[39;00m
+[0;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmetakg_pathfinder[39;00m [38;5;28;01mimport[39;00m MetaKGPathFinder
+[1;32m      6[0m [38;5;66;03m# Initialize the MetaKGPathFinder with a sample MetaKG file[39;00m
+[1;32m      7[0m [38;5;66;03m# Replace "path/to/metakg.json" with the actual path to your MetaKG index file[39;00m
+[1;32m      8[0m pathfinder [38;5;241m=[39m MetaKGPathFinder([38;5;124m"[39m[38;5;124mpath/to/metakg.json[39m[38;5;124m"[39m)
+
+[0;31mModuleNotFoundError[0m: No module named 'metakg_pathfinder'
+
