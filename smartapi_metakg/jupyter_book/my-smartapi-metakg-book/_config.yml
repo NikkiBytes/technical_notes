@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: SmartAPI Meta Knowledge Graph
-author: Nichollette Acosta, The Su and Wu Labs
+# author: Nichollette Acosta, The Su and Wu Labs
 logo: images/logo.png
 
 # Force re-execution of notebooks on each build.

@@ -1,11 +1,15 @@
 # Table of contents
 format: jb-book
-root: introduction
+root: 00_welcome
 chapters:
-  - file: understanding_metakg
-  - file: building_metakg
-  - file: interactive_examples
-    sections:
-      - file: query_paths
-      - file: visualize_paths
-  - file: conclusion
+  # - file: 00_welcome
+  - file: 01_introduction
+  - file: 02_datasources
+  # - file: building_metakg
+  # - file: smartapi_guide
+  # - file: validation
+  # - file: interactive_examples
+  #   sections:
+  #     - file: query_paths
+  #     - file: visualize_paths
+  # - file: conclusion
