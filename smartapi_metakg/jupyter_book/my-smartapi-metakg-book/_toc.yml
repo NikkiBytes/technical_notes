@@ -5,11 +5,5 @@ chapters:
   # - file: 00_welcome
   - file: 01_introduction
   - file: 02_datasources
-  # - file: building_metakg
-  # - file: smartapi_guide
-  # - file: validation
-  # - file: interactive_examples
-  #   sections:
-  #     - file: query_paths
-  #     - file: visualize_paths
-  # - file: conclusion
+  - file: 03_api
+  - file: 04_metakg_api
