@@ -1,0 +1,14 @@
+/* Apply scrolling to Jupyter code cell outputs */
+div.cell_output {
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 5px;
+    border: 1px solid #ddd; /* Optional: Add a border for clarity */
+    background-color: #f9f9f9; /* Optional: Background for better visibility */
+}
+
+/* Make preformatted text scrollable if used */
+div.cell_output pre {
+    white-space: pre-wrap; /* Wrap long lines */
+    word-wrap: break-word; /* Break long words */
+}
